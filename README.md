@@ -1,4 +1,47 @@
-# Haste
+# Haste (New Design)
+
+I have added my own version of styling to Haste. I didn't like the solarized dark theme, so I made my own version based on [Google's Material Design Colour Palette](https://material.io/guidelines/style/color.html#color-color-palette). I have also changed how the icons work, I added the fonts from icomoon to replicate the buttons for Save, New, Duplicate, etc...
+
+##Theme Settings
+The theme settings can be changed in the less file `static/less/variables-core.less`. To compile the files you can use something like [WinLess](http://winless.org/) _(Windows GUI for Less.js)_, [Koala](http://koala-app.com/) or [Less.js](http://lesscss.org/).
+The exact variable that you will want to edit, to change the colour of the 'box' is `@theme-color`. You can change this to any colour that is listed in the `md-colours.less` file.
+Example below shows the theme being changed to green.
+
+```css
+@body-bg:                           #10191e;
+@theme-color:                       @md-green-500; //HERE
+@text-color:                        @md-grey-50;
+
+//## Highlight JS Styling
+@hljs-title:                        @md-light-blue-500;
+@hljs-comment:                      @md-grey-500;
+...
+```
+![Examples](https://cdn.stuf.io/stufMaterial.png)
+
+
+The colours available are:
+* Red
+* Pink
+* Purple
+* Deep Purple
+* Indigo
+* Blue
+* Light blue
+* Cyan
+* Teal
+* Green
+* Light Green
+* Lime
+* Yellow
+* Amber
+* Orange
+* Deep Orange
+* Brown
+* Grey
+* Blue Grey
+* Various variation of White and black
+
 
 Haste is an open-source pastebin software written in node.js, which is easily
 installable in any network.  It can be backed by either redis or filesystem,
