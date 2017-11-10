@@ -1,0 +1,84 @@
+@import 'md-colors.less';
+@import 'variables-core.less';
+
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: @body-bg;
+  color: @text-color;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: @hljs-comment;
+}
+
+/* Solarized Green */
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-addition {
+  color: @hljs-keyword;
+}
+
+/* Solarized Cyan */
+.hljs-number,
+.hljs-string,
+.hljs-meta .hljs-meta-string,
+.hljs-literal,
+.hljs-doctag,
+.hljs-regexp {
+  color: @hljs-string;
+}
+
+/* Solarized Blue */
+.hljs-title,
+.hljs-section,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class {
+  color: @hljs-title;
+}
+
+/* Solarized Yellow */
+.hljs-attribute,
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-class .hljs-title,
+.hljs-type {
+  color: @hljs-attribute;
+}
+
+/* Solarized Orange */
+.hljs-symbol,
+.hljs-bullet,
+.hljs-subst,
+.hljs-meta,
+.hljs-meta .hljs-keyword,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-link {
+  color: @hljs-symbol;
+}
+
+/* Solarized Red */
+.hljs-built_in,
+.hljs-deletion {
+  color: @hljs-deletion;
+}
+
+.hljs-formula {
+  background: lighten(@body-bg, 20%);
+}
+
+.hljs-emphasis {
+  font-style: italic;
+  color: @md-purple-400;
+}
+
+.hljs-strong {
+  font-weight: bold;
+  color: @md-orange-500;
+}

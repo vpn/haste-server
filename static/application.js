@@ -338,6 +338,7 @@ haste.prototype.configureButton = function(options) {
     $('#box3 .shortcut').text(options.shortcutDescription || '');
     $('#box3').show();
     $(this).append($('#pointer').remove().show());
+    $('#pointer').addClass('icon-arrow-up5');
   });
   // Hide the label
   options.$where.mouseleave(function() {

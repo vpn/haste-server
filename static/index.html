@@ -2,10 +2,12 @@
 
 	<head>
 
-		<title>hastebin</title>
+		<title>StufBin // hastebin</title>
 		<meta charset="utf-8" />
-		<link rel="stylesheet" type="text/css" href="solarized_dark.css"/>
-		<link rel="stylesheet" type="text/css" href="application.css"/>
+		<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="icomoon/styles.css">
+		<link rel="stylesheet" type="text/css" href="theme.min.css"/>
+		<link rel="stylesheet" type="text/css" href="application.min.css"/>
 
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 		<script type="text/javascript" src="highlight.min.js"></script>
@@ -31,7 +33,7 @@
 			}, 1000);
 			// Construct app and load initial path
 			$(function() {
-				app = new haste('hastebin', { twitter: true });
+				app = new haste('StufBin // hastebin', { twitter: true });
 				handlePop({ target: window });
 			});
 		</script>
@@ -44,14 +46,14 @@
 		<div id="key">
 		  <div id="pointer" style="display:none;"></div>
 			<div id="box1">
-				<a href="/about.md" class="logo"></a>
+				<a href="/about.md" class="logo">StufBin</a>
 			</div>
 			<div id="box2">
-				<button class="save function button-picture">Save</button>
-				<button class="new function button-picture">New</button>
-				<button class="duplicate function button-picture">Duplicate & Edit</button>
-				<button class="raw function button-picture">Just Text</button>
-				<button class="twitter function button-picture">Twitter</button>
+				<button class="save function button-picture"><i class="icon-floppy-disk"></i> Save</button>
+				<button class="new function button-picture"><i class="icon-file-plus2"></i>New</button>
+				<button class="duplicate function button-picture"><i class="icon-paste3"></i>Duplicate & Edit</button>
+				<button class="raw function button-picture"><i class="icon-file-text3"></i>Just Text</button>
+				<button class="twitter function button-picture"><i class="icon-twitter"></i>Twitter</button>
 			</div>
 			<div id="box3" style="display:none;">
 				<div class="label"></div>

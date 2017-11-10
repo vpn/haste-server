@@ -1,5 +1,5 @@
 body {
-	background: #263238;
+	background: #002B36;
 	padding: 20px 50px;
 	margin: 0px;
 }
@@ -22,7 +22,7 @@ textarea {
 /* the line numbers */
 
 #linenos {
-	color: #7d7d7d;
+  color: #7d7d7d;
 	z-index: -1000;
 	position: absolute;
 	top: 20px;
@@ -43,7 +43,7 @@ textarea {
 	outline: none;
 	font-size: 13px;
 	padding-right: 360px;
-	overflow: inherit;
+  overflow: inherit;
 }
 
 #box code {
@@ -63,31 +63,28 @@ textarea {
 #box1 {
 	padding: 5px;
 	text-align: center;
-	background: #E91E63;
+	background: #00222b;
 }
 
 #box2 {
-	background: #EC407A;
+	background: #08323c;
 	font-size: 0px;
 	padding: 0px 5px;
 }
 
 #box1 a.logo, #box1 a.logo:visited {
-	font-size: 32px;
-	color: #f9c0d3;
 	display: inline-block;
-	background: none;
+	background: url(logo.png);
 	width: 126px;
-	text-decoration: none;
-	font-family: 'Pacifico', cursive;
+	height: 42px;
 }
 
 #box1 a.logo:hover {
-	color: white;
+	background-position: 0 bottom;
 }
 
 #box2 .function {
-	background: none;
+	background: url(function-icons.png);
 	width: 32px;
 	height: 37px;
 	display: inline-block;
@@ -116,7 +113,7 @@ textarea {
 }
 
 #box3, #messages li {
-	background: #F06292;
+	background: #173e48;
 	font-family: Helvetica, sans-serif;
 	font-size: 12px;
 	line-height: 14px;
@@ -133,17 +130,25 @@ textarea {
 	font-weight: normal;
 }
 
-#box2 .function {
-	color: #f491b2;
-	font-weight: bold !important;
-}
-#box2 .function.enabled {
-	color: #f9c0d3;
-}
-#box2 .function.enabled:hover {
-	color: #ffffff;
-}
+#box2 .function.save { background-position: -5px top; }
+#box2 .function.enabled.save { background-position: -5px center; }
+#box2 .function.enabled.save:hover { background-position: -5px bottom; }
 
+#box2 .function.new { background-position: -42px top; }
+#box2 .function.enabled.new { background-position: -42px center; }
+#box2 .function.enabled.new:hover { background-position: -42px bottom; }
+
+#box2 .function.duplicate { background-position: -79px top; }
+#box2 .function.enabled.duplicate { background-position: -79px center; }
+#box2 .function.enabled.duplicate:hover { background-position: -79px bottom; }
+
+#box2 .function.raw { background-position: -116px top; }
+#box2 .function.enabled.raw { background-position: -116px center; }
+#box2 .function.enabled.raw:hover { background-position: -116px bottom; }
+
+#box2 .function.twitter { background-position: -153px top; }
+#box2 .function.enabled.twitter { background-position: -153px center; }
+#box2 .function.enabled.twitter:hover { background-position: -153px bottom; }
 #box2 .button-picture{ border-width: 0; font-size: inherit; }
 
 #messages {
