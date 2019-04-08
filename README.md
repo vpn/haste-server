@@ -81,7 +81,7 @@ STDOUT.  Check the README there for more details and usages.
 * `host` - the host the server runs on (default localhost)
 * `port` - the port the server runs on (default 7777)
 * `keyLength` - the length of the keys to user (default 10)
-* `maxLength` - maximum length of a paste (default none)
+* `maxLength` - maximum length of a paste (default 400000)
 * `staticMaxAge` - max age for static assets (86400)
 * `recompressStaticAssets` - whether or not to compile static js assets (true)
 * `documents` - static documents to serve (ex: http://hastebin.com/about.com)
@@ -140,7 +140,9 @@ something like:
 }
 ```
 
-Where `path` represents where you want the files stored
+where `path` represents where you want the files stored.
+
+File storage currently does not support paste expiration, you can follow [#191](https://github.com/seejohnrun/haste-server/issues/191) for status updates.
 
 ### Redis
 
@@ -197,9 +199,9 @@ All of which are optional except `type` with very logical default values.
 
 ### Memcached
 
-To use memcached storage you must install the `memcache` package via npm
+To use memcache storage you must install the `memcached` package via npm
 
-`npm install memcache`
+`npm install memcached`
 
 Once you've done that, your config section should look like:
 
@@ -216,6 +218,28 @@ This behaves just like the redis expirations, but does not push expirations
 forward on GETs.
 
 All of which are optional except `type` with very logical default values.
+
+### RethinkDB
+
+To use the RethinkDB storage system, you must install the `rethinkdbdash` package via npm
+
+`npm install rethinkdbdash`
+
+Once you've done that, your config section should look like this:
+
+``` json
+{
+  "type": "rethinkdb",
+  "host": "127.0.0.1",
+  "port": 28015,
+  "db": "haste"
+}
+```
+
+In order for this to work, the database must be pre-created before the script is ran.
+Also, you must create an `uploads` table, which will store all the data for uploads.
+
+You can optionally add the `user` and `password` properties to use a user system.
 
 ## Author
 
